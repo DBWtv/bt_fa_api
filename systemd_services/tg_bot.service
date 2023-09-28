@@ -1,0 +1,14 @@
+[Unit]
+Description = TGBot service 
+After = syslog.target
+After = network.target
+
+[Service]
+Type = simple
+User = <>
+WorkingDirectory = <dir>
+ExecStart = <dir>>/env/bin/python3 <dir>/TGBot/main.py
+Restart = always
+
+[Install]
+WantedBy = multi-user.target

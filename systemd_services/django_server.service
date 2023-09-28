@@ -1,0 +1,14 @@
+[Unit]
+Description = Django API service 
+After = syslog.target
+After = network.target
+
+[Service]
+Type = simple
+User = <user> 
+WorkingDirectory = <dir>
+ExecStart = <dir>/env/bin/gunicorn -b 127.0.0.1:8000 core.wsgi:application --timeout 5
+Restart = always
+
+[Install]
+WantedBy = multi-user.target

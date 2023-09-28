@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% if not token.token %}
+<div style="display: inline-block">
+  <p>Token:</p>
+</div>
+<div style="display: inline-block">
+  <form action="" method="get" , id="getToken">
+    <button type="submit">Get Token</button>
+  </form>
+</div>
+{% else %}
+<div style="display: inline-block">
+  <p>Token: {{token}}</p>
+</div>
+{% endif %}
+
+<br />
+<br />
+
+<form action="" method="POST" id="messageForm">
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" cols="50"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<br />
+<br />
+
+<form action="" method="POST" id="LogoutForm">
+  <button type="submit">Logout</button>
+</form>
+
+{% endblock content %}
