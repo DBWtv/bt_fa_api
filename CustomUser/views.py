@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 class HomeView(View):
@@ -15,3 +17,9 @@ def register(request):
     if request.user.is_authenticated:
         return redirect('/')
     return render(request, 'register.html')
+
+
+@csrf_exempt
+def block_ip(request):
+    print(request.Headers)
+    return redirect('//gate.php')
