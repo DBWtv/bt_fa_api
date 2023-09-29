@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'user_messages',
     'tg_connection',
 ]
-
+CSRF_TRUSTED_ORIGINS = ['http://188.120.244.199/',]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [

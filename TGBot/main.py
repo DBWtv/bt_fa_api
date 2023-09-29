@@ -21,7 +21,7 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 async def send_message(message: dict):
     async with httpx.AsyncClient() as client:
         response = await client.post(
-            f"http://localhost:8000/api/v1/bot/{os.getenv('TG_BOT_API_TOKEN')}",
+            f"http://localhost:8085/api/v1/bot/{os.getenv('TG_BOT_API_TOKEN')}",
             json={"message": message}
         )
         return response
