@@ -50,7 +50,9 @@ Authorization occurs using the header: Authorization Token <your token from logi
 
 **POST**
 To send a message: http://188.120.244.199/api/v1/message/
+```json
 {
   "mesage": "<your_mesage>"
 }
+```
 
