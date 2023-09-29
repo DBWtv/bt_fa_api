@@ -35,6 +35,10 @@ ALLOWED_HOSTS = [
 
 TG_BOT_API_TOKEN = os.getenv('TG_BOT_API_TOKEN')
 
+CSRF_TRUSTED_ORIGINS = [
+    '*'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -77,7 +81,6 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
-CSRF_TRUSTED_ORIGINS = ['http://188.120.244.199/']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
