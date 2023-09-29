@@ -3,7 +3,7 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             type: "GET",
-            url: "api/v1/logout/",
+            url: "/api/v1/logout/",
             data: {},
             success: function(data){
                 window.location.reload();
@@ -15,7 +15,7 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             type: "GET",
-            url: "api/v1/token/",
+            url: "/api/v1/token/",
             data: {},
             success: function(data){
                 window.location.reload();
@@ -27,7 +27,7 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "api/v1/message/",
+            url: "/api/v1/message/",
             headers: {
                 'HTTP-X-CSRFToken': getCookie('csrftoken')
             },
