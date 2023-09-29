@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $("#messageForm").submit(function(e){
-        console.log(getCookie('csrftoken'))
+    $("#messageFormSend").submit(function(e){
         e.preventDefault();
+        console.log(getCookie('csrftoken'))
         $.ajax({
             type: "POST",
             url: "api/v1/message/",
