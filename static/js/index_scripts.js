@@ -4,12 +4,12 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             url: "api/v1/message/",
-            headers: {
-                'X-CSRFToken': getCookie('csrftoken')
-            },
+            // headers: {
+            //     'X-CSRFToken': getCookie('csrftoken')
+            // },
             data: {
-                message: $("textarea[name='message']").val(),
                 csrfmiddlewaretoken: getCookie('csrftoken'),
+                message: $("textarea[name='message']").val()
             },
             success: function(data){
                 alert("Message sent");
