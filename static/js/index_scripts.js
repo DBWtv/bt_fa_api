@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    let resp = $("#messageForm").submit(function(e){
+    $("#messageForm").submit(function(e){
+        console.log(getCookie('csrftoken'))
         e.preventDefault();
         $.ajax({
             type: "POST",
