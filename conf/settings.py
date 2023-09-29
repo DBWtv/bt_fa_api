@@ -60,8 +60,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
-    'http://*',
-    'https://*'
+'http://188.120.244.199'
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
