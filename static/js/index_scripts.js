@@ -22,4 +22,25 @@ $(document).ready(function(){
             }
         });
     });
+
+    $("#messageFormSend").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "api/v1/message/",
+            headers: {
+                'HTTP-X-CSRFToken': getCookie('csrftoken')
+            },
+            data: {
+                csrfmiddlewaretoken: getCookie('csrftoken'),
+                message: $("textarea[name='message']").val()
+            },
+            success: function(data){
+                alert("Message sent");
+            },
+            error: function(data){
+                alert("Error");
+            }
+        });
+    });
 });
