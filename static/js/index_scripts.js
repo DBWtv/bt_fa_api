@@ -2,12 +2,13 @@ $(document).ready(function(){
     $("#messageFormSend").submit(function(e){
         e.preventDefault();
         console.log(getCookie('csrftoken'))
+        console.log($("textarea[name='message']").val())
         $.ajax({
             type: "POST",
             url: "api/v1/message/",
-            // headers: {
-            //     'X-CSRFToken': getCookie('csrftoken')
-            // },
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')
+            },
             data: {
                 csrfmiddlewaretoken: getCookie('csrftoken'),
                 message: $("textarea[name='message']").val()
