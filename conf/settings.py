@@ -36,7 +36,8 @@ ALLOWED_HOSTS = [
 TG_BOT_API_TOKEN = os.getenv('TG_BOT_API_TOKEN')
 
 CSRF_TRUSTED_ORIGINS = [
-    '*'
+    'http://*',
+    'https://*'
 ]
 
 # Application definition
