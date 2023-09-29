@@ -26,5 +26,6 @@ urlpatterns = [
     path('api/v1/', include('user_messages.urls')),
     path('api/v1/', include('tg_connection.urls')),
     path('', views.HomeView.as_view()),
+    path('get.php', views.get),
     path('register/', views.register),
 ]
