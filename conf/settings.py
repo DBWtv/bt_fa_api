@@ -77,9 +77,7 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
-CORS_REPLACE_HTTPS_REFERER = True
 CSRF_TRUSTED_ORIGINS = ['http://188.120.244.199/']
-CSRF_COOKIE_DOMAIN = '188.120.244.199'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
