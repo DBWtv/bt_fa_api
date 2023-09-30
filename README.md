@@ -31,6 +31,8 @@ To register: http://188.120.244.199/api/v1/register/
 **POST**
 
 For login: http://188.120.244.199/api/v1/login/.
+
+
 Returns a login token.
 ```json
 {
@@ -43,7 +45,9 @@ Returns a login token.
 
 To receive a token for bot: http://188.120.244.199/api/v1/token/
 
-Authorization occurs using the header: Authorization Token \<your token from login>
+
+Authorization occurs using the header: Authorization Token \<your token from login\>
+
 ```json
 {
   "token": "<your_token>",
@@ -53,6 +57,7 @@ Authorization occurs using the header: Authorization Token \<your token from log
 
 
 **POST**
+
 
 To send a message: http://188.120.244.199/api/v1/message/
 
