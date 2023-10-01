@@ -67,4 +67,26 @@ To send a message: http://188.120.244.199/api/v1/message/
 }
 ```
 
+**GET**
+
+
+To get messages history: http://188.120.244.199/api/v1/message/history/
+
+```json
+{
+  [
+  {
+    "id": 2,
+    "message": "Hello there",
+    "date": "2023-10-01T06:29:06.892849Z"
+  },
+  {
+    "id": 1,
+    "message": "Check",
+    "date": "2023-10-01T06:28:58.745137Z"
+  }
+]
+}
+```
+
 
