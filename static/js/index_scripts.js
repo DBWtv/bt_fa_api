@@ -43,21 +43,4 @@ $(document).ready(function(){
             }
         });
     });
-    $("#getMessages").submit(function(e){
-        e.preventDefault();
-        $.ajax({
-            type: "GET",
-            url: "/api/v1/message/history/",
-            data: {},
-            success: function(data){
-                console.log(data);
-                $("#messagesHistory").html("");
-                for (var i = 0; i < data.length; i++){
-                    $("#messagesHistory").append("<p>" + data[i].message + "\t::\t" + data[i].date + "</p>");
-                }
-            },
-            error: function(data){
-                console.log("Cant get messages")
-            }
-        })});
 });

@@ -34,7 +34,3 @@ def register_message(request):
         message = request.data['message'],
     )
     
-
-def get_all_messages_for_user(request):
-    messages = MessageLog.objects.filter(user=request.user).order_by('-date')
-    return messages
